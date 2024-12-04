@@ -1,36 +1,67 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Local Development Setup
 
-First, run the development server:
+First install the dependencies with:
+
+```bash
+npm i --force
+```
+Why `--force`? Check: https://ui.shadcn.com/docs/react-19
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### App Folder
 
-## Learn More
+It contains the groups of 4 type of pages with each one having a different Layout.
 
-To learn more about Next.js, take a look at the following resources:
+- **Auth group**
+```
+Contains Sign-in and Sign-Up pages that can be used in future to create custom pages using Clerk components. 
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Landing Group**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+Contains a landing page for the unauthorized user and contains company and product details along with success stories. 
+```
 
-## Deploy on Vercel
+- **Root Group**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+Contains the protected paths of our app such as User Dashboard and Sales Data. 
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **NotFound Group**
+
+```
+This contains the 404 page to capture all the invalid routes user try to access.
+```
+
+### Components
+
+- **UI Folder**
+
+```
+This contains all the shadcn component that we add using their cli command.
+```
+
+- **Shared Folder**
+
+```
+This contains all the custom components that we created using shadcn components. It is sub divided in to groups based on the similar components like Cards and DataTable. 
+```
+
+### Lib
+
+```
+It contains the whole app utility functions, constants and dummy data.
+```
